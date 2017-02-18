@@ -4,6 +4,8 @@ const controllerSkill = require('../controllers/controller.skill')
 
 // http://localhost:3000/api/skills | GET | desc: get all data skill from database
 router.get('/', controllerSkill.getAllSkillL)
+// http://localhost:3000/api/seeder | GET | desc: add multipel skill to database
+router.get('/seeder', controllerSkill.seederSkill)
 // http://localhost:3000/api/skills | GET | desc: get one data skill from database
 router.get('/:skillid', controllerSkill.getOneSkill)
 // http://localhost:3000/api/skills | POST | desc: add one skill to database

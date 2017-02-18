@@ -41,6 +41,23 @@ var controllerSkill = {
       if (err) throw err
       res.json(data)
     })
+  },
+  seederSkill: function (req, res) {
+    var skillBag = [{
+      name: 'menanyi',
+      description: 'menanyi dengan merdu'
+    }, {
+      name: 'mambaca',
+      description: 'mambaca dengan cepat'
+    }, {
+      name: 'memandu',
+      description: 'memandu dengan baik'
+    }]
+
+    modelSkill.collection.insert(skillBag, function (err, data) {
+      if (err) throw err
+      res.json(data.ops)
+    })
   }
 }
 
