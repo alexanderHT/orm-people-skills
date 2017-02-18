@@ -3,7 +3,11 @@ var Schema = mongoose.Schema
 
 var personSchema = Schema({
   name: String,
-  skills: [{type: Schema.Types.ObjectId, ref: 'Skill'}]
+  bio: String,
+  skills: [
+    skill: {type: Schema.Types.ObjectId, ref: 'Skill'},
+    score: Number
+  ]
 }, {
   timestamps: true
 })

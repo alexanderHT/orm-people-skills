@@ -3,7 +3,7 @@ var Schema = mongoose.Schema
 
 var skillSchema = Schema({
   name: String,
-  score: Number
+  description: String
 }, {
   timestamps: true
 })
