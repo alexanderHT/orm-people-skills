@@ -9,3 +9,5 @@ var skillSchema = Schema({
 })
 
 var Skill = mongoose.model('Skill', skillSchema)
+
+module.exports = Skill
